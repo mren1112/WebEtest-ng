@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<body>
+  <main>
+
+    <div class="py-1">
+      <div class="container" style="margin-top: 1%;">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="assets/img/header.png" alt="header" class="im-responsive hidden-xs-down d-none d-md-block" width="50%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-0 " >
+      <div class="container bgOpacity " style="margin-top: 1%;">
+        <div class="row">
+          <div class="col-md-12" style="background-color: white;">&nbsp;</div>
+        </div>
+
+        <!--div class="row row-aligment">
+        <div class="col-md-12" >
+          <div class="row ">
+          <div class="col-md-3"> <a routerLink="/regisall" ><img src="assets/img/bt3.png" alt="button" class="bt-responsive zoomin"></a>
+          </div>
+          <div class="col-md-3"> <a routerLink="/recieptall" ><img src="assets/img/bt4.png" alt="button" class="bt-responsive zoomin"></a></div>
+        </div>
+      </div>
+      </div -->
+
+      <div class="row row-aligment">
+        <div class="col-md-12" >
+          <div class="row ">
+          <div class="col-md-3" *ngIf="chkStatus">
+            <a routerLink="" (click)="checkSystemStatus()" > <img src="assets/img/bt1.png" alt="button" class="bt-responsive zoomin" ></a>
+          </div>
+          <div class="col-md-3" *ngIf="chkStatus">
+            <a routerLink="/qrpagelist" ><img src="assets/img/bt2.png" alt="button" class="bt-responsive zoomin"></a></div>
+          <div class="col-md-3"> <a routerLink="/regisall" ><img src="assets/img/bt3.png" alt="button" class="bt-responsive zoomin"></a>
+          </div>
+          <div class="col-md-3"> <a routerLink="/recieptall" ><img src="assets/img/bt4.png" alt="button" class="bt-responsive zoomin"></a></div>
+        </div>
+      </div>
+      </div>
+        <div class="row row-aligment row-aligment-bt">
+          <div class="col-md-3"> <a routerLink="/policy" > <img src="assets/img/bt5.png" alt="button" class="bt-responsive zoomin"></a></div>
+          <div class="col-md-3"> <a routerLink="/info" ><img src="assets/img/bt6.png" alt="button" class="bt-responsive zoomin"></a> </div>
+          <div class="col-md-6">
+            <!--button  routerLink="waiting"><i class="material-icons orange600">face</i> xxxxxxx</!--button-->
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12" style="background-color: white;">&nbsp;</div>
+      </div>
+      </div>
+
+    </div>
+
+
+    <p></p>
+    <app-footer></app-footer>
+    <!-- Spinner -->
+      <div *ngIf="showSpinner" class="spinner"></div>
+      <div *ngIf="showSpinner" class="txtspinner">loading...</div>
+  </main>
+
+</body>

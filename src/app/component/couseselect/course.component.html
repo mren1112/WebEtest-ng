@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  type="text/css">
+<app-header></app-header>
+<div class="content" role="main">
+  <div class="container">
+    <app-profilecomponent></app-profilecomponent>
+
+    <mat-card>
+      <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-12 tabmaintable">
+        <div class="texrheader">
+          <h2> <span class="material-icons">
+              event
+            </span> &nbsp;&nbsp;แสดงวิชาที่สามารถลงทะเบียนสอบ E-testing ได้ ปีการศึกษา {{txtsem}}/{{year}}
+          </h2>
+        </div>
+      </div>
+    </div>
+      <div class="row" *ngIf="!chktodoCourse">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <b> ลำดับ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; วิชา
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    หน่วยกิต </b>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dt of todoCourse , let i = index">
+                <td>
+                  <b>
+                    <input type="checkbox" color="primary" (click)="toggleVisibility(dt.courseno,i)">
+                    # {{i+1}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{dt.courseno}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ({{dt.credit}}) {{dt.x}}
+                  </b>
+                  <b></b>
+
+                  <div *ngIf="dt.status">
+                    <p>
+
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [(ngModel)]="selectedDay[i]" [ngModelOptions]="{standalone: true}"
+                          [matDatepicker]="picker" [matDatepickerFilter]="myFilter" [min]="startDate"
+                          (dateChange)="addEvent( $event, i,dt.courseno)" (datechange)="changeEvent(dt.courseno,i)" />
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker ngDefaultControl></mat-datepicker>
+                      </mat-form-field> &nbsp;&nbsp;
+
+                      <label *ngIf="dt.secstatus" for="{{dt.courseno}}">Section</label>&nbsp;
+                      <select *ngIf="dt.secstatus" [(ngModel)]="selectedSection[i]" [id]="dt.courseno"
+                        (change)="changeDropdown(dt.courseno,i)" [ngModelOptions]="{standalone: true}">
+                        <ng-container *ngFor="let item of todoSection">
+                          <ng-container *ngIf="item.courseno === dt.courseno">
+                            <option *ngFor="let data of item.section" [value]="data">section {{data}}</option>
+                          </ng-container>
+                        </ng-container>
+                      </select>
+
+                      <ng-container *ngIf="dt.secmsgstatus">
+                        <label style="color: red;">{{dt.msg}}</label>&nbsp;
+                      </ng-container><br>
+                      <label style="color: red;">*วันสอบแสดงเป็น เดือน/วัน/ปี/คศ.</label>
+                    <p></p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ng-container *ngIf="chkDupDateAndSec">
+            <div class="row">
+              <div class="col-12" style="text-align: center;">
+                <p></p>
+                <h1 style="color: red;">**ท่านเลือกวันที่มีคาบสอบตรงกัน กรุณาทำการเลือกใหม่</h1>
+              </div>
+            </div>
+          </ng-container>
+          <mat-divider></mat-divider>
+          <section style="margin-top: 10px;">
+            <div class="example-label"></div>
+            <div class="example-button-row" style="text-align: center;"><br>
+              <button mat-raised-button color="primary" [disabled]="isEnable" (click)="confirm()">
+                <span class="material-icons">
+                  check_circle_outline
+                </span> ยืนยัน</button>&nbsp;
+              <button routerLink="/" routerLinkActive="active" mat-raised-button color="warn">
+                <span class="material-icons">
+                  cached
+                </span> ยกเลิก</button>
+            </div>
+          </section>
+          <p>
+            <hr>
+        </div>
+      </div>
+
+      <ng-container *ngIf="chktodoCourse">
+        <div class="row">
+          <div class="col-12" style="text-align: center;">
+            <p></p>
+            <h1 style="color: red;">ท่านไม่มีวิชาที่สามารถลงทะเบียนสอบได้</h1>
+            <p>
+              <button routerLink="/" routerLinkActive="active" mat-raised-button color="warn">
+                <span class="material-icons">
+                  home
+                </span> กลับสู่หน้าหลัก</button>
+
+
+              <!-- button mat-button (click)="openDialog()">Open dialog</button -->
+
+            </p>
+          </div>
+        </div>
+      </ng-container>
+
+
+
+    </mat-card>
+
+    <!-- end table -->
+
+
+    <ng-template #template>
+      <div class="modal-body text-center" >
+
+        <p>Do you want to confirm?</p>
+        <!--button mat-raised-button color="primary" [disabled]="isenabled"
+                routerLinkActive="active" (click)="btnconfirm(template) routerLink="/payment"">
+                <span class="material-icons">
+                  check_circle_outline
+                </span> ยืนยันการลงทะเบี่ยน</button-->
+        <button type="button" class="btn btn-danger" (click)="btnconfirm()" >ตกลง</button>&nbsp;
+        <button type="button" class="btn btn-primary" (click)="btndecline()">ยกเลิก</button>
+      </div>
+    </ng-template>
+    <!--pre>{{todoSection | json}}</pre>
+  <p></p>
+  <pre>{{todoCourse | json}}</pre>
+  <p></p>
+  <pre>{{todoSelectCourse | json}}</pre -->
+    <div *ngIf="showSpinner" class="spinner"></div>
+    <div *ngIf="showSpinner" class="txtspinner">loading...</div>
+  </div>
+
+</div>
+<app-footer></app-footer>

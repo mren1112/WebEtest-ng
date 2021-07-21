@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><label style="font-weight: bold; font-size: 1.5rem;"><i class="fa fa-user"></i> ข้อมูลนักศึกษา</label>  </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div class="row" style="margin-bottom: 10px; padding-left: 5%;">
+        <div class="col-md-5">
+        <label style="font-weight: bold; font-size: 1.05rem;"><i class="fa fa-address-card"></i> &nbsp;รหัสนักศึกษา:</label> &nbsp;{{stdcode}}
+          <p style="padding-top: 1%;">
+          <label style="font-weight: bold; font-size: 1.05rem;"><i class="fa fa-free-code-camp"></i> &nbsp;ชื่อ - สกุล: </label> &nbsp;{{namethai}}
+          </p>
+
+        </div>
+        <div class="col-md-7">
+          <span class="material-icons">
+            history_edu
+          </span>
+         <label style="font-weight: bold; font-size: 1.05rem;"><i class="fa fa-school"></i> &nbsp;คณะ: </label> &nbsp;{{facname}}
+          <p style="padding-top: 1%;">
+
+           <label style="font-weight: bold; font-size: 1.05rem;"><i class="fa fa-graduation-cap"></i> &nbsp;สาขา: </label> &nbsp;{{majorname}}
+          </p>
+        </div>
+      </div>
+
+  </mat-card-content>
+</mat-card><p></p>
+
+

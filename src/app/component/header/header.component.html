@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<mat-toolbar>
+
+  <mat-toolbar-row>
+
+    <span routerLink="/" routerLinkActive="active"><img src="assets/img/logo.png" alt="" width="40px"> Testing system</span>
+    <span class="example-spacer"></span>
+    <button #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <span (mouseleave)="menuTrigger.closeMenu()">
+      <button mat-menu-item (click)="btnNav(1)">
+        <mat-icon>home</mat-icon>
+        <span> <b>หน้าหลัก</b> </span>
+      </button>
+      <!--button mat-menu-item routerLink="/course" routerLinkActive="active" >
+        <mat-icon>important_devices</mat-icon>
+        <span>ลงทะเบียนสอบ E-testing</span>
+      </button-->
+      <button mat-menu-item (click)="btnNav(2)">
+        <mat-icon>qr_code</mat-icon>
+        <span> พิมพ์ QR Code ชำระเงิน</span>
+      </button>
+      <button mat-menu-item (click)="btnNav(3)">
+        <mat-icon>article</mat-icon>
+        <span>ข้อมูลลงทะเบียน</span>
+      </button>
+      <button mat-menu-item (click)="btnNav(4)">
+        <mat-icon>local_printshop</mat-icon>
+        <span>ใบเสร็จ</span>
+      </button>
+      <button mat-menu-item (click)="btnNav(5)">
+        <mat-icon>policy</mat-icon>
+        <span>ข้อตกลงการใช้งาน</span>
+      </button>
+      <button mat-menu-item (click)="btnNav(6)">
+        <mat-icon>info</mat-icon>
+        <span>ประชาสัมพันธ์</span>
+      </button>
+
+      <button mat-menu-item (click)="openModal(template)">
+        <mat-icon>login</mat-icon>
+        <span>ออกจากระบบ</span>
+      </button>
+    </span>
+    </mat-menu>
+    <!--button mat-mini-fab color="basic" aria-label="Example icon button with a home icon" (click)="openModal(template)">
+      <mat-icon>login</mat-icon></button-->
+   </mat-toolbar-row>
+</mat-toolbar>
+
+<ng-template #template>
+  <div class="modal-body text-center" >
+
+    <p>ท่านต้องการออกจากระบบ?</p>
+    <!--button mat-raised-button color="primary" [disabled]="isenabled"
+            routerLinkActive="active" (click)="btnconfirm(template) routerLink="/payment"">
+            <span class="material-icons">
+              check_circle_outline
+            </span> ยืนยันการลงทะเบี่ยน</button-->
+    <button type="button" class="btn btn-danger" (click)="btnconfirm()" >ตกลง</button>&nbsp;
+    <button type="button" class="btn btn-primary" (click)="btndecline()">ยกเลิก</button>
+  </div>
+</ng-template>
