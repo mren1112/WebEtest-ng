@@ -26,7 +26,7 @@ export class PaymentComponent implements OnInit {
   public total = '';
   public duedate = '';
   public datetime = '';
-  public urfltest = 'https://devtest.ru.ac.th/ThaiQR/eTestQR?totalAmount=1&username=6299999991&tel=0812345678&duedate=200820&yearsem=631&refnum=000001';
+  public urfltest = 'https://devtest.ru.ac.th/ThaiQR/etestQRCODE?totalAmount=1&username=6299999991&tel=0812345678&duedate=2359311221&semyear=633';
   public urlFecthqar = '';
   public todoCourse: any = [];
   public tmptodoCourse: any = [];
