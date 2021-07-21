@@ -1,0 +1,97 @@
+main {
+  margin-top: 10%;
+  padding-top: 30px;
+  width: 95%;
+  margin: auto;
+  background-color: #fad390;
+
+}
+
+.tabmaintable {
+  width: 95%;
+  padding-top: 10px;
+  background:linear-gradient(to bottom, #f7ac0a 5%, #ff961f 100%);
+
+}
+
+.texrheader {
+  padding: 4px 0 4px 0;
+  color: white;
+
+}
+table {
+  border-color: rgb(233, 120, 14);
+  border: 1;
+  background-color: white;
+  width: 100%;
+
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td,
+.table-striped>tbody>tr:nth-child(2n+1)>th {
+  background-color: #f8e8c6;
+}
+
+
+.spinner{
+  border: 16px solid silver;
+  border-top: 16px solid #3c6382;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 500ms linear infinite;
+  top: 30%;
+  left: 50%;
+position: absolute;z-index: 99 !important;
+}
+
+@keyframes spin{
+   0% {transform: rotate(0deg)}
+   100% {transform: rotate(-360deg)}
+}
+
+
+.txtspinner{
+  top: 45%;
+  left: 53%;
+position: absolute;;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-im3k {
+  border-color: #ffc702;
+  text-align: left;
+  vertical-align: top
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top
+}

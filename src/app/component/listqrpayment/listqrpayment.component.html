@@ -1,0 +1,161 @@
+<<<<<<< HEAD
+<body>
+  <app-header></app-header>
+<main>
+          <app-profilecomponent></app-profilecomponent>
+=======
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<body>
+  <!-- app-header></app-header -->
+<main>
+          <!-- app-profilecomponent></app-profilecomponent -->
+          <mat-card>
+>>>>>>> 762a820f (bk commit)
+   <div class="row">
+    <div class="col-md-4 col-align">
+      <div class="row">
+        <div class="col-md-12 col-align">
+          <div class="card">
+            <div class="row">
+<<<<<<< HEAD
+              <div class="col-12">
+                <img class="card-img-top" src="assets/img/ru_QR.jpg" alt="Card image cap">
+                <img class="card-body" style="width: 90%;"
+                  src="{{urlFecthqar}}">
+=======
+              <div class="col-12" style="text-align: center;">
+                <img class="card-img-top" src="assets/img/ru_QR.jpg" alt="Card image cap">
+                <img class="card-body" style="width: 90%;" src="{{urlFecthqar}}">
+                <img class="card-body" style="width: 90%;" src="{{imageURL}}">
+                <code>{{imageURL}}</code>
+                  <!-- qrcode class="card-body" #parent [qrdata]="qrdata" [size]="256" [level]="'H'" ></qrcode-->
+                  <br>
+>>>>>>> 762a820f (bk commit)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; font-weight: bold;">
+                <b>จำนวนเงิน : {{total}}.00 บาท (TH/B).</b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%;"> ลงทะเบี่ยนสอบ E-Testing &nbsp; ภาค {{txtsem}}/{{year}} </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; "> {{namethai}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; "><b>ชำระเงินภายในวันที่:</b>  {{expText}} เวลา 23:55 น.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="card-text"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="card-text"></p>
+              </div>
+              <div class="col-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-12 ">
+                <hr>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p></p>
+    </div>
+    <div class="col-md-8">
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-12 tabmaintable">
+          <div class="texrheader">
+            <h2>
+              <span class="material-icons">
+                backup_table
+              </span> วิชาที่นักศึกษาได้ทำการลงทะเบียนสอบ E-testing
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="background-color: white;">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#No</th>
+                <th scope="col">วิชา</th>
+                <th scope="col">วันที่สอบ</th>
+                <th scope="col">คาบสอบ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dt of todoCourse; let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td>{{dt.courseno}}</td>
+                <td>{{dt.examdate}}</td>
+                <td>{{dt.sectime}} น. ({{dt.section}}) </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <mat-divider></mat-divider>
+          <P></P>
+          <section>
+<<<<<<< HEAD
+            <div class="example-button-row" style="text-align: center;">
+=======
+            <div class="example-button-row" style="text-align: center; padding-top: 4%;">
+>>>>>>> 762a820f (bk commit)
+              <button mat-raised-button color="warn" routerLinkActive="active" (click)="cleardata(1)">
+                <span class="material-icons">
+                  home
+                </span> กลับสู่หน้าหลัก</button>
+                &nbsp;
+<<<<<<< HEAD
+                <button  routerLinkActive="active" mat-raised-button color="primary" (click)="clearqrdata(1)">
+=======
+                <button  routerLinkActive="active" mat-raised-button color="primary" (click)="cleardata(2)">
+>>>>>>> 762a820f (bk commit)
+                 <span class="material-icons">
+                   fast_rewind
+                   </span> กลับไปก่อนหน้า</button>
+
+            </div>
+          </section>
+<<<<<<< HEAD
+          <p>
+            <hr>
+=======
+>>>>>>> 762a820f (bk commit)
+
+        </div>
+      </div>
+    </div>
+  </div>
+<<<<<<< HEAD
+
+=======
+</mat-card>
+<div *ngIf="showSpinner" class="spinner"></div>
+<div *ngIf="showSpinner" class="txtspinner">loading...</div><p></p>
+>>>>>>> 762a820f (bk commit)
+</main>
+
+<app-footer></app-footer>
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 762a820f (bk commit)
+</body>
+

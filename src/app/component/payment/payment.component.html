@@ -1,0 +1,149 @@
+<app-header></app-header>
+<body>
+
+
+<main>
+
+  <app-profilecomponent></app-profilecomponent>
+<<<<<<< HEAD
+  <div class="row" style="margin-bottom: 2px;">
+    <div class="col-md-12" > <hr>
+    </div>
+  </div>
+=======
+<mat-card>
+>>>>>>> 762a820f (bk commit)
+  <div class="row">
+    <div class="col-md-4 col-align">
+      <div class="row">
+        <div class="col-md-12 col-align">
+          <div class="card">
+            <div class="row">
+              <div class="col-12">
+<<<<<<< HEAD
+                <img class="card-img-top" src="../../../assets/img/ru_QR.jpg" alt="Card image cap">
+                <img class="card-body" style="width: 90%;"
+                  src="{{urlFecthqar}}">
+              </div>
+            </div>
+=======
+                <img class="card-img-top" src="assets/img/ru_QR.jpg" alt="Card image cap">
+                <!-- img class="card-body" style="width: 90%;"
+                  src="{{urlFecthqar}}" -->
+                    <qrcode class="card-body" #parent [qrdata]="qrdata" [size]="256" [level]="'M'" style="width: 100%;"></qrcode>
+                    <br>
+              </div>
+            </div>
+
+>>>>>>> 762a820f (bk commit)
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; font-weight: bold;">
+                <b>จำนวนเงิน: {{total}}.00 บาท (TH/B).</b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%;"> ลงทะเบียนสอบ E-Testing &nbsp; ภาค {{txtsem}}/{{year}} </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; ">{{namethai}}</div>
+            </div>
+
+            <div class="row">
+              <div class="col-12" style="text-align: left; padding-left: 10%; padding-top: 1%; ">
+               <b>ชำระเงินภายในวันที่:</b>  {{expText}} เวลา 23:55 น.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 ">
+                <hr>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p></p>
+    </div>
+    <div class="col-md-8">
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-12 tabmaintable">
+          <div class="texrheader">
+            <h2>
+              <span class="material-icons">
+                backup_table
+<<<<<<< HEAD
+              </span> วิชาที่นักศึกษาได้ทำการลงทะเบียนสอบ E-testing
+=======
+              </span> วิชาที่นักศึกษาได้ทำการลงทะเบียนสอบ E-testing  {{sem}}/{{year}}
+>>>>>>> 762a820f (bk commit)
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="background-color: white;">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#No</th>
+                <th scope="col">วิชา</th>
+                <th scope="col">วันที่สอบ</th>
+                <th scope="col">คาบสอบ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dt of dataregister; let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td>{{dt.courseno}}</td>
+                <td>{{dt.examdate}}</td>
+                <td>{{dt.sectime}} น. ({{dt.section}}) </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <mat-divider></mat-divider>
+          <P></P>
+          <section>
+<<<<<<< HEAD
+            <div class="example-button-row" style="text-align: center;">
+              <button mat-raised-button color="warn"  routerLinkActive="active" (click)="cleardata(1)">
+                <span class="material-icons">
+                  home
+                </span> กลับสู่หน้าหลัก</button>&nbsp;
+
+            </div>
+          </section>
+
+
+        </div>
+        <div class="row">
+          <div class="col-md-12">&nbsp;</div>
+=======
+            <div class="row" style="margin-top: 3%;">
+                <div class="col-12 "><p></p>
+                <div class="example-button-row" style="text-align: center;">
+                  <button mat-raised-button color="warn"  routerLinkActive="active" (click)="cleardata(1)">
+                  <i class="fa fa-home"></i>&nbsp; กลับสู่หน้าหลัก</button>&nbsp;
+                </div> 
+              </div>
+            </div>
+
+          </section>
+>>>>>>> 762a820f (bk commit)
+        </div>
+      </div>
+    </div>
+  </div>
+<<<<<<< HEAD
+=======
+</mat-card>
+
+>>>>>>> 762a820f (bk commit)
+  <div *ngIf="showSpinner" class="spinner"></div>
+  <div *ngIf="showSpinner" class="txtspinner">loading...</div>
+</main>
+
+<app-footer></app-footer>
+</body>

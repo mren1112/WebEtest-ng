@@ -1,0 +1,139 @@
+main {
+  width: 95%;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 762a820f (bk commit)
+  margin: auto;
+  padding-top: 2%;
+}
+
+<<<<<<< HEAD
+body {
+  margin-top: 0;
+  background: url('../../../assets/img/mainbg2.png');
+  box-shadow: 0 4px 8px 0 rgba(217, 231, 19, 0.2), 0 6px 20px 0 rgba(255, 200, 18, 0.19);
+  background-color: lightgoldenrodyellow;
+  background-repeat:  repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+mat-card{
+   width: 95%;
+=======
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin-top: 0;
+  background: url('../../../assets/img/mainbg2.png') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+mat-card {
+>>>>>>> 762a820f (bk commit)
+  padding-bottom: 2%;
+  margin: auto;
+}
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 762a820f (bk commit)
+card-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.col-align {
+  text-align: center;
+}
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 762a820f (bk commit)
+.tabmaintable {
+  width: 95%;
+  padding-top: 10px;
+  background-color: #00437b;
+  -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
+  -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
+  box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 762a820f (bk commit)
+}
+
+.texrheader {
+  padding: 4px 0 4px 0;
+  color: white;
+<<<<<<< HEAD
+
+}
+.qrbuttom {
+ background-color: #00437b;
+
+}
+.spinner{
+=======
+}
+
+.qrbuttom {
+  background-color: #00437b;
+}
+
+.spinner {
+>>>>>>> 762a820f (bk commit)
+  border: 16px solid silver;
+  border-top: 16px solid #3c6382;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 500ms linear infinite;
+  top: 30%;
+  left: 50%;
+<<<<<<< HEAD
+position: absolute;
+z-index: 99 !important;
+}
+
+@keyframes spin{
+   0% {transform: rotate(0deg)}
+   100% {transform: rotate(-360deg)}
+}
+
+.txtspinner{
+  top: 45%;
+  left: 53%;
+position: absolute;;
+=======
+  position: absolute;
+  z-index: 99 !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(-360deg)
+  }
+}
+
+.txtspinner {
+  top: 45%;
+  left: 53%;
+  position: absolute;
+  ;
+>>>>>>> 762a820f (bk commit)
+}

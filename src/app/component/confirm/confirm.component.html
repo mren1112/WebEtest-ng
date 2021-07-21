@@ -1,0 +1,208 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<app-header></app-header><body>
+<main>
+  <div class="container">
+    <app-profilecomponent></app-profilecomponent>
+<<<<<<< HEAD
+    <div class="row" style="margin-bottom: 15px;">
+=======
+    <mat-card>
+      <div class="row" style="margin-bottom: 15px;">
+>>>>>>> 762a820f (bk commit)
+      <div class="col-md-12 tabmaintable">
+        <div class="texrheader">
+          <h2>
+            <span class="material-icons">
+              backup_table
+<<<<<<< HEAD
+            </span> ยืนยันวิชาที่นักศึกษาได้ทำการลงทะเบียนสอบ E-testing
+=======
+            </span> ยืนยันวิชาที่นักศึกษาได้ทำการลงทะเบียนสอบ E-testing ปีการศึกษา {{txtsem}}/{{year}}
+>>>>>>> 762a820f (bk commit)
+          </h2>
+        </div>
+      </div>
+    </div>
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 762a820f (bk commit)
+    <div class="row" style="background-color: white;">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+<<<<<<< HEAD
+              <th scope="col" style="width: 10px;">#No</th>
+=======
+              <th scope="col" style="width: 5px;">#</th>
+>>>>>>> 762a820f (bk commit)
+              <th scope="col">วิชา</th>
+              <th scope="col">วันที่สอบ</th>
+              <th scope="col">คาบสอบ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of tmptodoCourse , let i = index">
+<<<<<<< HEAD
+              <th scope="row" style="width: 10px;">{{i+1}}</th>
+=======
+              <th scope="row" style="width: 5px;">{{i+1}}</th>
+>>>>>>> 762a820f (bk commit)
+              <td>{{item.courseno}}</td>
+              <td> {{item.examdate}}</td>
+              <td>{{item.sectime}} น. ({{item.section}}) <h6 style="color: red;">&nbsp;{{item.tmpSection}}</h6>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+<<<<<<< HEAD
+        <p>&nbsp;</p>
+=======
+>>>>>>> 762a820f (bk commit)
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-striped">
+              <tr style="text-align: right; background-color: #fff5d2;">
+<<<<<<< HEAD
+                <td style="text-align: right;">
+                  <b> ค่าลงทะเบียนสอบวิชาละ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{perCourse}} บาท</b></td>
+              </tr>
+              <tr style="text-align: right; background-color: #ffeaa7;">
+                <td style="text-align: right;">
+                  <b> ค่าลงทะเบี่ยนจำนวน &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{cntTodoCourse}}
+                    วิชา</b></td>
+              </tr>
+              <tr style="text-align: right; background-color: #fdcb6e;">
+                <td style="text-align: right;">
+                  <b> จำนวนเงิน &nbsp;&nbsp;&nbsp;&nbsp; {{total}} บาท</b></td>
+=======
+                <td style="text-align: right;">ค่าลงทะเบียนสอบวิชาละ
+                  <b style="padding-left: 10%;"> {{perCourse}} บาท</b></td>
+              </tr>
+              <tr style="text-align: right; background-color: #ffeaa7;">
+                <td style="text-align: right;">จำนวนวิชาลงทะเบียน
+                  <b style="padding-left: 10%;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{cntTodoCourse}} วิชา</b></td>
+              </tr>
+              <tr style="text-align: right; background-color: #fdcb6e;">
+                <td style="text-align: right;">
+                  <b> จำนวนเงินที่ต้องชำระ</b>
+                  <b style="padding-left: 9%;"> {{total}} บาท</b></td>
+>>>>>>> 762a820f (bk commit)
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <ng-container *ngIf="chkDupDateAndSec">
+          <div class="row">
+            <div class="col-12" style="text-align: center;"> <p></p><h1 style="color: red;">ท่านเลือกวันที่มีคาบสอบตรงกัน กรุณาทำการเลือกใหม่</h1><p>
+              <button routerLink="/course" routerLinkActive="active" mat-raised-button color="warn">
+                <span class="material-icons">
+                  fast_rewind
+<<<<<<< HEAD
+                </span> กลับไปเลือกใหม่</button>
+
+=======
+                </span> กลับไปเลือกใหม่</button>&nbsp;
+                <button mat-raised-button color="dark"
+                routerLinkActive="active" (click)="openModalBackHome(templatehome)">
+                <i class="fa fa-home"></i> กลับสู่หน้าหลัก</button>
+>>>>>>> 762a820f (bk commit)
+            </p></div>
+          </div>
+        </ng-container>
+        <mat-divider></mat-divider>
+        <P></P>
+
+        <ng-container *ngIf="chkDupButton">
+          <div class="row">
+            <div class="col-12"style="text-align: center;">
+        <section>
+          <div class="example-button-row" style="text-align: center;">
+            <!--  <button mat-raised-button color="primary"  routerLink="/payment" routerLinkActive="active" (click)="confirm()">-->
+
+            <button mat-raised-button color="primary" [disabled]="isenabled"
+              routerLinkActive="active" (click)="openModal(template)">
+              <span class="material-icons">
+                check_circle_outline
+              </span> ยืนยันการลงทะเบียน</button>&nbsp;
+            <button mat-raised-button color="warn" routerLink="/course" routerLinkActive="active">
+              <span class="material-icons">
+                fast_rewind
+<<<<<<< HEAD
+              </span> ยกเลิก</button>
+
+=======
+              </span> ยกเลิก</button>&nbsp;
+              <button mat-raised-button color="dark"
+              routerLinkActive="active" (click)="openModalBackHome(templatehome)">
+              <i class="fa fa-home"></i> กลับสู่หน้าหลัก</button>
+>>>>>>> 762a820f (bk commit)
+          </div>
+        </section>
+      </div>
+    </div>
+      </ng-container>
+
+        <p>
+          <hr>
+      </div>
+    </div>
+<<<<<<< HEAD
+=======
+  </mat-card>
+>>>>>>> 762a820f (bk commit)
+  </div>
+  <div *ngIf="showSpinner" class="spinner"></div>
+  <div *ngIf="showSpinner" class="txtspinner">loading...</div>
+
+  <br><br>
+
+
+
+
+  <ng-template #template>
+    <div class="modal-body text-center" >
+
+<<<<<<< HEAD
+      <p>Do you want to confirm?</p>
+      <!--button mat-raised-button color="primary" [disabled]="isenabled"
+              routerLinkActive="active" (click)="btnconfirm(template) routerLink="/payment"">
+              <span class="material-icons">
+                check_circle_outline
+              </span> ยืนยันการลงทะเบี่ยน</button-->
+=======
+      <p>
+        {{msgmodal}}
+      </p>
+>>>>>>> 762a820f (bk commit)
+      <button type="button" class="btn btn-danger" (click)="btnconfirm()" >ตกลง</button>&nbsp;
+      <button type="button" class="btn btn-primary" (click)="btndecline()">ยกเลิก</button>
+    </div>
+  </ng-template>
+<<<<<<< HEAD
+=======
+
+  <ng-template #templatehome>
+    <div class="modal-body text-center" >
+
+      <p>
+        {{msgmodal}}
+      </p>
+      <button type="button" class="btn btn-danger" (click)="btndhome()" >ตกลง</button>&nbsp;
+      <button type="button" class="btn btn-primary" (click)="btndecline()">ยกเลิก</button>
+    </div>
+  </ng-template>
+
+>>>>>>> 762a820f (bk commit)
+</main>
+
+<app-footer></app-footer>
+</body>
