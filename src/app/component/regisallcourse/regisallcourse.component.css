@@ -8,11 +8,7 @@ main {
 body {
   margin-top: 0;
   background: url('../../../assets/img/mainbg2.png');
-<<<<<<< HEAD
-  box-shadow: 0 4px 8px 0 rgba(217, 231, 19, 0.2), 0 6px 20px 0 rgba(255, 200, 18, 0.19);
-=======
  /* box-shadow: 0 4px 8px 0 rgba(217, 231, 19, 0.2), 0 6px 20px 0 rgba(255, 200, 18, 0.19);*/
->>>>>>> 762a820f (bk commit)
   background-color: lightgoldenrodyellow;
   background-repeat:  repeat;
   background-position: center center;
@@ -36,31 +32,18 @@ body {
 
 }
 
-<<<<<<< HEAD
-.container{
-  -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-}
-=======
 /*.container{
   -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
 }*/
->>>>>>> 762a820f (bk commit)
 
 .table-striped>tbody>tr:nth-child(2n+1)>td,
 .table-striped>tbody>tr:nth-child(2n+1)>th {
   background-color: #ffeaa7;
 }
 
-<<<<<<< HEAD
-
-.spinner{
-=======
 .spinner {
->>>>>>> 762a820f (bk commit)
   border: 16px solid silver;
   border-top: 16px solid #3c6382;
   border-radius: 50%;
@@ -69,23 +52,6 @@ body {
   animation: spin 500ms linear infinite;
   top: 30%;
   left: 50%;
-<<<<<<< HEAD
-position: absolute;z-index: 99 !important;
-}
-
-@keyframes spin{
-   0% {transform: rotate(0deg)}
-   100% {transform: rotate(-360deg)}
-}
-
-
-.txtspinner{
-  top: 45%;
-  left: 53%;
-position: absolute;;
-}
-
-=======
   position: absolute;
   z-index: 99 !important;
 }
@@ -105,4 +71,3 @@ position: absolute;;
   position: absolute;
   ;
 }
->>>>>>> 762a820f (bk commit)

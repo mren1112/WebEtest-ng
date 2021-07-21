@@ -8,22 +8,14 @@ import { ApiRecieptMsgService } from 'src/app/services/ApiRecieptMsg.service';
 
 
 @Component({
-<<<<<<< HEAD
-  selector: 'app-info',
-=======
   selector: 'app-recieptall',
->>>>>>> 762a820f (bk commit)
   templateUrl: './reciept.component.html',
   styleUrls: ['./reciept.component.css']
 
 })
 export class RecieptAllCreateComponent implements OnInit {
 
-<<<<<<< HEAD
-  public us;
-=======
   public stdcode;
->>>>>>> 762a820f (bk commit)
   public currentTime = new Date();
   public todoQrdatalist: any = [];
   // public us;
@@ -57,37 +49,6 @@ export class RecieptAllCreateComponent implements OnInit {
 
   }
   ngOnInit() {
-<<<<<<< HEAD
-    if (sessionStorage.getItem("stdcode") == null) {
-      alert('please login again');
-      this.backClicked();
-    } else {
-      this.us = sessionStorage.getItem('stdcode');
-      if (sessionStorage.getItem('reloadslip') == null) {
-        window.location.reload();
-        sessionStorage.setItem('reloadslip', 'Y')
-      }
-      this.getProfileData();
-    }
-  }
-
-  getProfileData() {
-
-    this.sem = sessionStorage.getItem("sem");
-    this.year = sessionStorage.getItem("year");
-    this.us = sessionStorage.getItem("stdcode");
-    this.telnum = sessionStorage.getItem("tel");
-    this.namethai = sessionStorage.getItem("namethai");
-    this.getRepList();
-
-  }
-
-  getRepList() {
-    this.ApiFetchReciept.getJSON().subscribe((data) => {
-      this.todolist = data.results;
-      var cnt = Object.keys(this.todolist).length;
-      //alert(cnt);
-=======
     this.getProfileData();
   }
 
@@ -125,55 +86,11 @@ export class RecieptAllCreateComponent implements OnInit {
       this.todolist = data.results;
       let cnt = Object.keys(this.todolist).length;
      // alert(cnt);
->>>>>>> 762a820f (bk commit)
       if (cnt === 0) {
         this.chkTodoCourse = true;
       } else {
         this.chkTodoCourse = false;
       }
-<<<<<<< HEAD
-    });
-
-    //get msg
-    this.ApiRecieptMsg.getJSON().subscribe(res => {
-      this.msg = res.msg;
-      // console.log("x sec = " + JSON.stringify(res));
-    });
-
-  }
-
-
-  getSlip(refkey) {
-    // this.router.navigate(['generateslipt']);
-    // window.open('https://devtest.ru.ac.th/ThaiQR/eTestQR?totalAmount?xx='+this.us, "_blank");
-
-
-    /*this.http.post<any>('http://sevkn.ru.ac.th:8888/etestgbackend/GetSlipt/'
-    , { stdcode:this.us,refkey:refkey,sem:this.sem,year:this.year}).subscribe({
-      //next: data => this.postId = data.id,
-      error: error => console.error('There was an error!', error)
-  })*/
-
-
-    if (refkey != '') {
-      //btoa(this.us)
-      //  console.log('BTOA = '+btoa(this.us));
-      //window.open('http://localhost:8113/etestgbackend/GetSlipt?stdcode='+btoa(this.us)+'&refkey='+btoa(refkey)+'&sem='+btoa(this.sem)+'&year='+btoa(this.year), "_blank");
-      window.open('http://sevkn.ru.ac.th:8888/etestgbackend/GetSlipt?stdcode=' + btoa(this.us) + '&refkey=' + btoa(refkey) + '&sem=' + btoa(this.sem) + '&year=' + btoa(this.year), "_blank");
-
-    } else {
-      alert("Can't load Data please reload now!");
-      this.router.navigate(['qrpagelist']);
-    }
-
-
-  }
-
-  backClicked() {
-    // this._location.back();
-    sessionStorage.removeItem("stdcode");
-
-=======
     } else {
       this.loading();
     }
@@ -197,18 +114,12 @@ export class RecieptAllCreateComponent implements OnInit {
 
   backClicked() {
     sessionStorage.removeItem("stdcode");
->>>>>>> 762a820f (bk commit)
     sessionStorage.clear();
     window.location.href = 'https://www.ru.ac.th/th/';
   }
 
   backhome() {
     // this._location.back();
-<<<<<<< HEAD
-    sessionStorage.removeItem("reloadslip");
-    this.router.navigate(['/']);
-  }
-=======
     this.router.navigate(['/']);
   }
 
@@ -220,5 +131,4 @@ export class RecieptAllCreateComponent implements OnInit {
       this.showSpinner = false;
     }, 1500);
   }
->>>>>>> 762a820f (bk commit)
 }

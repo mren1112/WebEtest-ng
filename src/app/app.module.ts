@@ -30,10 +30,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 762a820f (bk commit)
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -78,14 +74,11 @@ import { ApiCheckSystemService } from './services/ApiCheckSystem.Service';
 import { SystemPageComponent } from './component/systempage/system.component';
 import { ApiRecieptMsgService } from './services/ApiRecieptMsg.service';
 import { RegisStatusPageCreateComponent } from './component/regispagestatus/registstatus.component';
-<<<<<<< HEAD
-=======
 import { PublicDialogComponent } from './component/publicdialog/dialog.component';
 import { WaitingpageComponent } from './component/waitingpage/waitingpage.component';
 import { ApiGetPaymentService } from './services/ApiGetPeyment.service';
 import { QRCodeModule } from 'angularx-qrcode';
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
->>>>>>> 762a820f (bk commit)
 
 const appRoutes: Routes = [
   //home/6290508511
@@ -106,11 +99,8 @@ const appRoutes: Routes = [
   { path: "listqrpayment", component: ListQrPaymentComponent },
   { path: "systemcomponent", component: SystemPageComponent },
   { path: "registstatus", component: RegisStatusPageCreateComponent },
-<<<<<<< HEAD
-=======
   { path: "waiting", component: WaitingpageComponent },
   { path: "**", component: PagenotfoundComponent },
->>>>>>> 762a820f (bk commit)
 ]
 
 @NgModule({
@@ -134,14 +124,10 @@ const appRoutes: Routes = [
     SliptComponent,
     ListQrPaymentComponent,
     SystemPageComponent,
-<<<<<<< HEAD
-    RegisStatusPageCreateComponent
-=======
     RegisStatusPageCreateComponent,
     PublicDialogComponent,
     WaitingpageComponent,
     PagenotfoundComponent
->>>>>>> 762a820f (bk commit)
     //CustomMaterialModule
 
 
@@ -172,10 +158,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     MatProgressSpinnerModule,
-<<<<<<< HEAD
-=======
     QRCodeModule,
->>>>>>> 762a820f (bk commit)
     //BsModalService,
     ModalModule.forRoot(),
     BackButtonDisableModule.forRoot({preserveScrollPosition: true}),
@@ -202,22 +185,14 @@ const appRoutes: Routes = [
     ApiFectSelectPayQrService,
     ApiFetchPaymentService,
     ApiCheckSystemService,
-<<<<<<< HEAD
-    ApiRecieptMsgService
-=======
     ApiRecieptMsgService,
     ApiGetPaymentService,
->>>>>>> 762a820f (bk commit)
     //{provide: LOCALE_ID, useValue: 'en' },
     //{ provide: LOCALE_ID, useValue: "th-TH" }
   ],
   //declarations: [ ConfirmDialogComponent],
   //  entryComponents: [ConfirmDialogComponent],
-<<<<<<< HEAD
-  bootstrap: [AppComponent]
-=======
   bootstrap: [AppComponent],
      entryComponents: [PublicDialogComponent]
->>>>>>> 762a820f (bk commit)
 })
 export class AppModule { }

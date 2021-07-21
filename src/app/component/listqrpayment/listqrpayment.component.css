@@ -1,37 +1,22 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 762a820f (bk commit)
 main {
   padding-top: 40px;
   width: 95%;
   margin: auto;
-<<<<<<< HEAD
-
-}
-=======
 }
 
->>>>>>> 762a820f (bk commit)
 body {
   margin-top: 0;
   background: url('../../../assets/img/mainbg2.png');
   box-shadow: 0 4px 8px 0 rgba(217, 231, 19, 0.2), 0 6px 20px 0 rgba(255, 200, 18, 0.19);
   background-color: lightgoldenrodyellow;
-<<<<<<< HEAD
-  background-repeat:  repeat;
-=======
   background-repeat: repeat;
->>>>>>> 762a820f (bk commit)
   background-position: center center;
   background-attachment: fixed;
   height: 100%;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 762a820f (bk commit)
 .tabmaintable {
   width: 95%;
   padding-top: 10px;
@@ -39,48 +24,20 @@ body {
   -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 762a820f (bk commit)
 }
 
 .texrheader {
   padding: 4px 0 4px 0;
   color: white;
   font-weight: bold;
-<<<<<<< HEAD
-
-}
-
-.container{
-=======
 }
 
 .container {
->>>>>>> 762a820f (bk commit)
   -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
 }
 
-<<<<<<< HEAD
-.table-striped>tbody>tr:nth-child(2n+1)>td,
-.table-striped>tbody>tr:nth-child(2n+1)>th {
-  background-color: #f8edd4;
-}
-a{
-  color: #341f97;
-}
-
-.buttomdiv{
-  margin-bottom: 15px;
-}
-
-
-.spinner{
-=======
 .table-striped>tbody>tr:nth-child(2n+1)>td, .table-striped>tbody>tr:nth-child(2n+1)>th {
   background-color: #f8edd4;
 }
@@ -94,7 +51,6 @@ a {
 }
 
 .spinner {
->>>>>>> 762a820f (bk commit)
   border: 16px solid silver;
   border-top: 16px solid #3c6382;
   border-radius: 50%;
@@ -103,23 +59,6 @@ a {
   animation: spin 500ms linear infinite;
   top: 30%;
   left: 50%;
-<<<<<<< HEAD
-position: absolute;z-index: 99 !important;
-}
-
-@keyframes spin{
-   0% {transform: rotate(0deg)}
-   100% {transform: rotate(-360deg)}
-}
-
-
-.txtspinner{
-  top: 45%;
-  left: 53%;
-position: absolute;;
-}
-
-=======
   position: absolute;
   z-index: 99 !important;
 }
@@ -139,4 +78,3 @@ position: absolute;;
   position: absolute;
   ;
 }
->>>>>>> 762a820f (bk commit)

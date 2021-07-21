@@ -15,11 +15,7 @@ export class ApiFetchQrPaymentService {
   //public tmpdatetoStr = sessionStorage.getItem("tmpdatetoStr");
 
 
-<<<<<<< HEAD
-  urlFetch = "http://sevkn.ru.ac.th//etest/getQrpaylist.jsp?STD_CODE=";
-=======
   urlFetch = "http://sevkn.ru.ac.th/etest-api-12c/getQrpaylist.jsp?STD_CODE=";
->>>>>>> 762a820f (bk commit)
 
 
 
@@ -29,14 +25,6 @@ export class ApiFetchQrPaymentService {
      // sessionStorage.setItem("stdcode", response.STD_CODE);
     });*/
   }
-<<<<<<< HEAD
-  getJSON(): Observable<any> {
-    return this.http.get(this.urlFetch+this.us+"&sem="+this.sem+"&year="+this.year)
-                .pipe(map((response: any)=> response ),
-                      catchError(err => {return (err)}));
-  }
-
-=======
   /*getJSON(): Observable<any> {
     return this.http.get(this.urlFetch+this.us+"&sem="+this.sem+"&year="+this.year)
                 .pipe(map((response: any)=> response ),
@@ -48,7 +36,6 @@ export class ApiFetchQrPaymentService {
                 .pipe(map((response: any)=> response ),
                       catchError(err => {return (err)}));
   }
->>>>>>> 762a820f (bk commit)
 
 }
 

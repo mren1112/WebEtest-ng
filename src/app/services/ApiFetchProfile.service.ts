@@ -36,11 +36,7 @@ export class ApiFetchProfileService {
    // });
   }
   getJSON(username:string){
-<<<<<<< HEAD
-    return this.httppp.get('http://sevkn.ru.ac.th//etest/getProfile.jsp?STD_CODE='+username)
-=======
     return this.httppp.get('http://sevkn.ru.ac.th/etest-api-12c/getProfile.jsp?STD_CODE='+username)
->>>>>>> 762a820f (bk commit)
                 .pipe(map((response: any)=> response ),
                       catchError(err => {return (err)}));
   }

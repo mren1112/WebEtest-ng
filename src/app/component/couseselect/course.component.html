@@ -5,31 +5,6 @@
 <app-header></app-header>
 <div class="content" role="main">
   <div class="container">
-<<<<<<< HEAD
-
-    <div class="row" style="margin-bottom: 20px;">
-      <div class="col-12">
-
-        <p>
-
-      </div>
-    </div>
-    <app-profilecomponent></app-profilecomponent>
-    <hr>
-    <form>
-      <div class="row" style="margin-bottom: 15px;">
-        <div class="col-md-12 tabmaintable">
-          <div class="texrheader">
-            <h2> <span class="material-icons">
-                event
-              </span> &nbsp;&nbsp;แสดงวิชาที่สามารถลงทะเบียนสอบ E-testing ได้ปีการศึกษา {{sem}}/{{year}}
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" *ngIf="!chktodoCourse" style="background-color: white;">
-=======
     <app-profilecomponent></app-profilecomponent>
 
     <mat-card>
@@ -44,7 +19,6 @@
       </div>
     </div>
       <div class="row" *ngIf="!chktodoCourse">
->>>>>>> 762a820f (bk commit)
         <div class="col-12">
           <table class="table table-striped">
             <thead>
@@ -68,19 +42,7 @@
 
                   <div *ngIf="dt.status">
                     <p>
-<<<<<<< HEAD
-                      <!-- <mat-form-field class="example-full-width"> -->
-                      <!--mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepickerFilter]="myFilter" [min]="startDate" [max]="endtDate" [id]="dt.courseno" [matDatepicker]="picker" [(ngModel)]="search_do.custNo" [ngModelOptions]="{standalone: true}">
-                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker ngDefaultControl [(ngModel)]="search_do.custNo" [ngModelOptions]="{standalone: true}" (selectedChanged)="onDateTest($event)"></mat-datepicker>
-                  </mat-form-field-->
-                      <!-- <input type="date" [(ngModel)]="selectedDay[i]" color="primary" (change)="addData(dt,i)"  [ngModelOptions]="{standalone: true}">
 
-               </mat-form-field> -->
-=======
-
->>>>>>> 762a820f (bk commit)
                       <mat-form-field class="example-full-width">
                         <mat-label>Choose a date</mat-label>
                         <input matInput [(ngModel)]="selectedDay[i]" [ngModelOptions]="{standalone: true}"
@@ -88,10 +50,6 @@
                           (dateChange)="addEvent( $event, i,dt.courseno)" (datechange)="changeEvent(dt.courseno,i)" />
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker ngDefaultControl></mat-datepicker>
-<<<<<<< HEAD
-
-=======
->>>>>>> 762a820f (bk commit)
                       </mat-form-field> &nbsp;&nbsp;
 
                       <label *ngIf="dt.secstatus" for="{{dt.courseno}}">Section</label>&nbsp;
@@ -103,40 +61,17 @@
                           </ng-container>
                         </ng-container>
                       </select>
-<<<<<<< HEAD
-=======
 
->>>>>>> 762a820f (bk commit)
                       <ng-container *ngIf="dt.secmsgstatus">
                         <label style="color: red;">{{dt.msg}}</label>&nbsp;
                       </ng-container><br>
                       <label style="color: red;">*วันสอบแสดงเป็น เดือน/วัน/ปี/คศ.</label>
-<<<<<<< HEAD
-                      <!--mat-form-field *ngIf="dt.secstatus">
-                        <mat-label>select section</mat-label>
-                        <mat-select  *ngIf="dt.secstatus" [(ngModel)]="selectedSection[i]"
-                        (change)="changeDropdown(dt.courseno,i)" [ngModelOptions]="{standalone: true}">
-                          <mat-option *ngFor="let item of sectionfix" [value]="item.sect">
-                            {{item.sect}}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field-->
-                    <p></p>
-
-                  </div>
-
-=======
                     <p></p>
                   </div>
->>>>>>> 762a820f (bk commit)
                 </td>
               </tr>
             </tbody>
           </table>
-<<<<<<< HEAD
-
-=======
->>>>>>> 762a820f (bk commit)
           <ng-container *ngIf="chkDupDateAndSec">
             <div class="row">
               <div class="col-12" style="text-align: center;">
@@ -148,11 +83,7 @@
           <mat-divider></mat-divider>
           <section style="margin-top: 10px;">
             <div class="example-label"></div>
-<<<<<<< HEAD
-            <div class="example-button-row" style="text-align: center;">
-=======
             <div class="example-button-row" style="text-align: center;"><br>
->>>>>>> 762a820f (bk commit)
               <button mat-raised-button color="primary" [disabled]="isEnable" (click)="confirm()">
                 <span class="material-icons">
                   check_circle_outline
@@ -161,20 +92,12 @@
                 <span class="material-icons">
                   cached
                 </span> ยกเลิก</button>
-<<<<<<< HEAD
-
-=======
->>>>>>> 762a820f (bk commit)
             </div>
           </section>
           <p>
             <hr>
         </div>
       </div>
-<<<<<<< HEAD
-      <!-- end table -->
-=======
->>>>>>> 762a820f (bk commit)
 
       <ng-container *ngIf="chktodoCourse">
         <div class="row">
@@ -186,22 +109,15 @@
                 <span class="material-icons">
                   home
                 </span> กลับสู่หน้าหลัก</button>
-<<<<<<< HEAD
-                <!-- button mat-button (click)="openDialog()">Open dialog</button -->
-=======
 
 
               <!-- button mat-button (click)="openDialog()">Open dialog</button -->
->>>>>>> 762a820f (bk commit)
 
             </p>
           </div>
         </div>
       </ng-container>
 
-<<<<<<< HEAD
-    </form>
-=======
 
 
     </mat-card>
@@ -222,7 +138,6 @@
         <button type="button" class="btn btn-primary" (click)="btndecline()">ยกเลิก</button>
       </div>
     </ng-template>
->>>>>>> 762a820f (bk commit)
     <!--pre>{{todoSection | json}}</pre>
   <p></p>
   <pre>{{todoCourse | json}}</pre>

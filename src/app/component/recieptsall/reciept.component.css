@@ -32,19 +32,11 @@ body {
 
 }
 
-<<<<<<< HEAD
-.container {
-  -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-}
-=======
 /*.container {
   -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
   box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
 }*/
->>>>>>> 762a820f (bk commit)
 
 .table-striped>tbody>tr:nth-child(2n+1)>td,
 .table-striped>tbody>tr:nth-child(2n+1)>th {
@@ -121,8 +113,6 @@ body {
   text-align: left;
   vertical-align: top
 }
-<<<<<<< HEAD
-=======
 
 .spinner {
   border: 16px solid silver;
@@ -152,4 +142,3 @@ body {
   position: absolute;
   ;
 }
->>>>>>> 762a820f (bk commit)

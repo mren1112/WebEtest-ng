@@ -33,18 +33,11 @@ body {
 
 }
 
-<<<<<<< HEAD
-.container{
-  -webkit-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  -moz-box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-  box-shadow: 9px 10px 0px -7px rgba(128, 128, 128, 1);
-=======
 .texrheader2 {
   padding: 4px 0 4px 0;
   color: rgb(255, 255, 255);
   font-weight: bold;
 
->>>>>>> 762a820f (bk commit)
 }
 
 .table-striped>tbody>tr:nth-child(2n+1)>td,

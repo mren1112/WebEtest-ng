@@ -20,14 +20,10 @@ export class ApiFetchDateService {
                       catchError(err => {return (err)}));
   }
 
-<<<<<<< HEAD
-
-=======
   getJsonCalendar(sem:string,year:string): Observable<any> {
     return this.http.get(this.urlFetch + year + '&sem=' + sem)
                 .pipe(map((response: any)=> response ),
                       catchError(err => {return (err)}));
   }
->>>>>>> 762a820f (bk commit)
 }
 

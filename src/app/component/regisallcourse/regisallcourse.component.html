@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <app-header></app-header>
-<body>
-<main>
-
-
-  <div class="container">
-    <app-profilecomponent></app-profilecomponent>
-   <hr>
-       <div class="row" style="margin-bottom: 15px;">
-        <div class="col-md-12 tabmaintable" >
-          <div class="texrheader">
-            <h2>
-              <span class="material-icons">
-            backup_table
-          </span> แสดงวิชาที่นักศึกษาได้ทำการลงทะเบียนปีการศึกษา {{sem}}/{{year}}
-            </h2>  </div>
-        </div>
-      </div>
-
-     <div class="row" style="background-color: white;">
-      <div class="col-md-12">
-       <table class="table table-striped">
-         <thead>
-           <tr>
-             <th scope="col" style="width: 10px;">#No</th>
-             <th scope="col">วิชา</th>
-             <th scope="col">วันที่สอบ</th>
-           </tr>
-         </thead>
-         <tbody>
-           <tr *ngFor="let data of allCourse; let i = index;">
-             <th scope="row" style="width: 10px;">{{i+1}}</th>
-             <td>{{data.courseNo}}</td>
-             <td> {{data.examperiod}}</td>
-           </tr>
-
-         </tbody>
-       </table>
-
-       <mat-divider></mat-divider>
-       <P></P>
-       <section style="margin-top: 15px;">
-        <div class="example-button-row" style="text-align: center;">
-          <button (click)="backhome()" routerLinkActive="active" mat-raised-button color="warn">
-           <span class="material-icons">
-             home
-             </span> กลับสู่หน้าหลัก</button>
-
-        </div>
-      </section>
-       <p>
-         <hr>
-      </div>
-    </div>
-   </div>
-
-</main>
-<p></p>
-<app-footer></app-footer>
-=======
 <app-header></app-header>
 <body>
   <main>
@@ -133,5 +66,4 @@ integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7
   <app-footer></app-footer>
   <div *ngIf="showSpinner" class="spinner"></div>
   <div *ngIf="showSpinner" class="txtspinner">loading...</div>
->>>>>>> 762a820f (bk commit)
 </body>

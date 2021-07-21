@@ -27,16 +27,10 @@ export class ApiFetchETCourseService {
   public sem = sessionStorage.getItem("sem");
   public year = sessionStorage.getItem("year");
 
-<<<<<<< HEAD
-  urlFetchETCourse = "http://sevkn.ru.ac.th//etest/getEtCourse.jsp?STD_CODE=" + this.us + "&sem=" + this.sem + "&year=" + this.year;
-  urlFetchHisETCourse = "http://sevkn.ru.ac.th//etest/gethisregiscourse.jsp?STD_CODE=" + this.us + "&sem=" + this.sem + "&year=" + this.year;
-  urlFetchHisCourse = "http://sevkn.ru.ac.th//etest/gethisregiscourse.jsp?STD_CODE=";
-=======
   //urlFetchETCourse = "http://sevkn.ru.ac.th/etest/getEtCourse.jsp?STD_CODE=" + this.us + "&sem=" + this.sem + "&year=" + this.year;
   urlFetchHisETCourse = "http://sevkn.ru.ac.th/etest/gethisregiscourse.jsp?STD_CODE=" + this.us + "&sem=" + this.sem + "&year=" + this.year;
   urlFetchHisCourse = "http://sevkn.ru.ac.th/etest/gethisregiscourse.jsp?STD_CODE=";
   private urlFetchETCourse = "http://sevkn.ru.ac.th/etest-api-12c/getEtCourse.jsp?STD_CODE=";
->>>>>>> 762a820f (bk commit)
 
   constructor(private http: HttpClient) {
    /* this.getJSON().subscribe(response => {
@@ -51,17 +45,10 @@ export class ApiFetchETCourseService {
       // console.log(response);
     });*/
 
-<<<<<<< HEAD
-    this.getHisregister().subscribe(res => {
-      sessionStorage.setItem('todoHis', JSON.stringify(res.results));
-      // console.log(response);
-    });
-=======
     /*this.getHisregister().subscribe(res => {
       sessionStorage.setItem('todoHis', JSON.stringify(res.results));
       // console.log(response);
     });//*/
->>>>>>> 762a820f (bk commit)
   }
 
 
@@ -85,8 +72,6 @@ export class ApiFetchETCourseService {
           return (err)
         }));
   }
-<<<<<<< HEAD
-=======
 
    getJsonData(stdcode: string, sem: string, year: string): Observable<any> {
     return  this.http.get(this.urlFetchETCourse + stdcode + '&sem=' + sem + '&year=' + year)
@@ -96,5 +81,4 @@ export class ApiFetchETCourseService {
           return (err)
         }));
   }
->>>>>>> 762a820f (bk commit)
 }

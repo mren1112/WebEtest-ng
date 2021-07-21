@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { Component, Injectable, OnInit } from "@angular/core";
-import { Event, Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RouterEvent, ActivatedRoute, ParamMap } from "@angular/router";
-import { ApiFetchProfileService } from 'src/app/services/ApiFetchProfile.service';
-import { stringify } from 'querystring';
-import { map } from 'rxjs/operators';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { ApiFetchDateService } from 'src/app/services/ApiFetchDate.service';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { clear } from "console";
-
-=======
 import { Component, TemplateRef, OnInit } from '@angular/core';
 import {
   Event,
@@ -26,21 +14,10 @@ import { clear } from 'console';
 import { MatDialog } from '@angular/material/dialog';
 import { PublicDialogComponent } from '../publicdialog/dialog.component';
 import { GlobalUrlToRedirect,MessegeNoti } from '../../interfaces/GlobalUrlToRedirect';
->>>>>>> 762a820f (bk commit)
 
 @Component({
   selector: 'app-menu',
   templateUrl: './homemenu.component.html',
-<<<<<<< HEAD
-  styleUrls: ['./homemenu.component.css']
-})
-
-export class HomeMenuCreateComponent implements OnInit {
-  public stdcode;
-  todoProfile: any = [];
-  todoCounter: any[];
-  public us;
-=======
   styleUrls: ['./homemenu.component.css'],
 })
 export class HomeMenuCreateComponent implements OnInit {
@@ -48,34 +25,10 @@ export class HomeMenuCreateComponent implements OnInit {
   public todoProfile: any = [];
   public todoCounter: any[];
   public us='';
->>>>>>> 762a820f (bk commit)
   //todos:TodoProfile[] = [];
   public chkcoursefull: boolean = false;
   public chkStatus: boolean = false;
   public todoHis: any = [];
-<<<<<<< HEAD
-  //-----------spinner----------------------
-
-  showLoading = true;
-  //----------------------------------------
-  public id;
-  public todoCalendar: any = [];
-  showSpinner = false;
-  //-----------------------------------------
-  public sem = sessionStorage.getItem("sem");
-  public year = sessionStorage.getItem("year");
-  mySubscription: any;
-
-  constructor(
-    private apiFetchProfile: ApiFetchProfileService,
-    //private apiFetchETCourse: ApiFetchETCourseService,
-    private _router: Router,
-    private route: ActivatedRoute,
-    private apiFetchDate: ApiFetchDateService,
-  ) { }
-
-
-=======
   public chkisnull=0;
   //public urlRedirect = 'https://beta-e-service.ru.ac.th/';
   private baseUrlRedirec = GlobalUrlToRedirect.BASE_REDIRECT_URL;
@@ -133,18 +86,10 @@ export class HomeMenuCreateComponent implements OnInit {
     }
   }
 
->>>>>>> 762a820f (bk commit)
   ngOnInit() {
     this.chekLoadInit();
   }
 
-<<<<<<< HEAD
-  async chekLoadInit() {
-    let getStd = await sessionStorage.getItem('stdcode');
-    let seat = await JSON.parse(sessionStorage.getItem('todosys'));
-    if ( getStd.length < 10 ) {
-      alert('please login again');
-=======
   async checkSeatIsfull() {
     let xdialog = await sessionStorage.getItem('xdialog');
     if (xdialog != 'Y') {
@@ -160,33 +105,21 @@ export class HomeMenuCreateComponent implements OnInit {
     // let seat = await JSON.parse(sessionStorage.getItem('todosys'));
     if (getStd.length < 10) {
       alert('Please login again');
->>>>>>> 762a820f (bk commit)
       this.backClicked();
     }
 
     if (sessionStorage.getItem('chkop') == 'N') {
       this.chkStatus = true;
-<<<<<<< HEAD
-    }
-    else {
-=======
     } else {
->>>>>>> 762a820f (bk commit)
       //  console.log("chkop = " + sessionStorage.getItem("chkop"));
       this.chkStatus = true;
     }
 
-<<<<<<< HEAD
-    this.loading();
-    this.getProfile();
-    sessionStorage.removeItem("subrefkey");
-=======
     this.checkSeatIsfull();
     await this.loading();
     this.getProfile();
     sessionStorage.removeItem('subrefkey');
     sessionStorage.removeItem('refkey');
->>>>>>> 762a820f (bk commit)
   }
 
   backClicked() {
@@ -195,18 +128,6 @@ export class HomeMenuCreateComponent implements OnInit {
     localStorage.clear();
     //window.open('https://www.ru.ac.th/th/','_self');
     //window.location.replace("https://www.ru.ac.th/th/");
-<<<<<<< HEAD
-    window.location.href='https://www.ru.ac.th';
-  }
-
-
-  async loading() {
-    if (sessionStorage.getItem("stdcode") == "" || sessionStorage.getItem("stdcode") == null || sessionStorage.getItem("stdcode") == undefined) {
-      sessionStorage.clear();
-      window.open('https://www.ru.ac.th');
-    } else {
-      if (sessionStorage.getItem("namethai")) {
-=======
     window.location.href = this.baseUrlRedirec;
   }
 
@@ -219,19 +140,13 @@ export class HomeMenuCreateComponent implements OnInit {
       window.open(this.baseUrlRedirec);
     } else {
       if (namethai) {
->>>>>>> 762a820f (bk commit)
         // location.reload();
         this.showSpinner = true;
         setTimeout(() => {
           this.showSpinner = false;
         }, 2000);
       } else {
-<<<<<<< HEAD
-
-        if (sessionStorage.getItem("chkop") === 'N') {
-=======
         if (chkop === 'N' || chkop == null || chkop == undefined) {
->>>>>>> 762a820f (bk commit)
           //alert("chkop = " + sessionStorage.getItem("chkop"));
           this.chkStatus = false;
           //     alert('wtf')
@@ -244,15 +159,9 @@ export class HomeMenuCreateComponent implements OnInit {
   }
 
   async getProfile() {
-<<<<<<< HEAD
-
-    if (sessionStorage.getItem("stdcode") != "") {
-      this.id = sessionStorage.getItem("stdcode");
-=======
     let us = await sessionStorage.getItem('stdcode');
     if (us != '') {
       this.id = sessionStorage.getItem('stdcode');
->>>>>>> 762a820f (bk commit)
       // this.getEtHisregister();
     } else {
       this._router.routeReuseStrategy.shouldReuseRoute = function () {
@@ -268,35 +177,6 @@ export class HomeMenuCreateComponent implements OnInit {
       this.loading();
     }
 
-<<<<<<< HEAD
-    let res = await this.apiFetchProfile.getJSON(this.id).toPromise();
-    this.todoProfile = res;
-    if (Object.keys(this.todoProfile).length === 0) {
-      location.reload();
-      //alert('Loading data faild please login again.');
-    } else {
-
-      sessionStorage.setItem("namethai", this.todoProfile.NameThai);
-      sessionStorage.setItem("facno", this.todoProfile.FacNo);
-      sessionStorage.setItem("majorno", this.todoProfile.MajorNo);
-      sessionStorage.setItem("majornamthai", this.todoProfile.MajorNameThai);
-      sessionStorage.setItem("facName", this.todoProfile.FacNameThai);
-      sessionStorage.setItem("birth", this.todoProfile.Birth);
-
-      if (this.todoProfile.NameThai === '') {
-        alert('ไม่สามารถเข้าสู่ระบบได้่');
-        this.logout();
-      } else {
-        if (this.todoProfile.tel == "" || this.todoProfile.tel == null) {
-          alert('ท่านยังไม่ได้ระบุหมายเลขโทรศัพท์ กรุณาเพิ่มหมายเลขโทรศัพท์ที่สามารถติดต่อได้ที่ระบบ e-service. ก่อนทำการลงทะเบียน');
-          this.logout();
-        } else {
-          sessionStorage.setItem("tel", this.todoProfile.tel);
-        }
-      }
-
-
-=======
     // let res = await this.apiFetchProfile.getJSON(this.id).toPromise();
     let tel = '',
     NameThai = '';
@@ -333,23 +213,10 @@ export class HomeMenuCreateComponent implements OnInit {
           sessionStorage.setItem('tel', tel);
         }
       }
->>>>>>> 762a820f (bk commit)
     }
   }
 
   logout() {
-<<<<<<< HEAD
-    sessionStorage.removeItem("stdcode");
-    sessionStorage.clear();
-    localStorage.clear();
-    window.location.href = 'https://www.ru.ac.th';
-  }
-
-  async checkSystemStatus() {
-    let tempA = await sessionStorage.getItem("chkop");
-    let seat = await JSON.parse(sessionStorage.getItem('todosys'));
-    console.log(seat.sumseat)
-=======
     sessionStorage.removeItem('stdcode');
     sessionStorage.clear();
     localStorage.clear();
@@ -360,50 +227,11 @@ export class HomeMenuCreateComponent implements OnInit {
     let tempA = await sessionStorage.getItem('chkop');
     let seat = await JSON.parse(sessionStorage.getItem('todosys'));
     console.log(seat);
->>>>>>> 762a820f (bk commit)
     //console.log('tempA = ' + tempA);
     if (Object.keys(tempA).length === 0 || tempA == null) {
       window.location.reload();
       setTimeout(() => {
         this.showSpinner = false;
-<<<<<<< HEAD
-      }, 2000);
-    }
-
-    //var tmp;
-    setTimeout(function () { let tmp = JSON.stringify(tempA) }, 100);
-    //this.getCalendar();
-    if (tempA === 'N' || Number(seat.sumseat) == 0) {
-      //alert('ไม่อยู่ในช่วงการลงทะเบียน!');
-      // this.router.navigate(['systemcomponent']);
-    } else {
-     // this._router.navigate(['course']);
-      // this.getCalendar();
-    }
-
-  }
-
- /* async getCalendar() {
-    let res = await this.apiFetchDate.getJSON().toPromise();
-    if (res) {
-      this.todoCalendar = res.results || {};
-      var checkDate;
-      this.todoCalendar.forEach(e => {
-        checkDate = e.tmpYear;
-
-      });
-      if (Object.keys(checkDate).length < 1) {
-        this.chkcoursefull = false;
-        alert('จำนวนการลงทะเบียนสอบเต็มแล้ว');
-      } else {
-        this._router.navigate(['course']);
-      }
-    }
-
-  }*/
-
-
-=======
       }, 1000);
     }
 
@@ -424,5 +252,4 @@ export class HomeMenuCreateComponent implements OnInit {
       // this.getCalendar();
     }
   }
->>>>>>> 762a820f (bk commit)
 }

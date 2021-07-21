@@ -1,10 +1,6 @@
 
 body {
-<<<<<<< HEAD
-  margin-top: 0;
-=======
   margin-top: 0%;
->>>>>>> 762a820f (bk commit)
   background: url('../../../assets/img/mainbg2.png');
   box-shadow: 0 4px 8px 0 rgba(217, 231, 19, 0.2), 0 6px 20px 0 rgba(255, 200, 18, 0.19);
   background-color: lightgoldenrodyellow;
@@ -15,13 +11,6 @@ body {
 }
 
 main {
-<<<<<<< HEAD
-  padding-top: 40px;
-  width: 95%;
-  margin: auto;
-  background-color: white;
-
-=======
   padding-top: 20px;
   width: 90%;
   margin: auto;
@@ -32,7 +21,6 @@ main {
 
 mat-card{
   background-color: rgba(255, 255, 255, 0.7);
->>>>>>> 762a820f (bk commit)
 }
 
 .spinner{

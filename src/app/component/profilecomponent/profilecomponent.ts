@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
->>>>>>> 762a820f (bk commit)
 
 
 @Component({
@@ -11,18 +7,6 @@ import { Component, OnInit } from '@angular/core';
   //styleUrls: ['./profilecomponent.css']
 
 })
-<<<<<<< HEAD
-export class ProfileComponent{
-  us = sessionStorage.getItem("stdcode");
-  sem = sessionStorage.getItem("sem");
-  year = sessionStorage.getItem("year");
-  majorname = sessionStorage.getItem("majornamthai");
-  namethai = sessionStorage.getItem("namethai");
-  facname = sessionStorage.getItem("facName");
-  tel = sessionStorage.getItem("tel");
-  constructor(){
-
-=======
 export class ProfileComponent implements OnInit {
   public stdcode = "";
   public sem =  "";
@@ -47,7 +31,6 @@ export class ProfileComponent implements OnInit {
     this.namethai = await sessionStorage.getItem("namethai");
     this.facname = await sessionStorage.getItem("facName");
     this.tel = await sessionStorage.getItem("tel");
->>>>>>> 762a820f (bk commit)
   }
 
 }

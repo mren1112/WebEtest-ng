@@ -25,14 +25,11 @@ export class ConfirmDialogComponent implements OnInit {
     this.dialogRef.close(true);
   }
 
-<<<<<<< HEAD
-=======
   btnPaymentpage(): void {
     // Close the dialog, return true
     this.dialogRef.close(true);
   }
 
->>>>>>> 762a820f (bk commit)
   onDismiss(): void {
     // Close the dialog, return false
     this.dialogRef.close(false);

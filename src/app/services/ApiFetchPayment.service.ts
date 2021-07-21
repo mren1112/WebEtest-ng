@@ -10,20 +10,10 @@ import { Http } from '@angular/http';
 export class ApiFetchPaymentService {
 
 
-<<<<<<< HEAD
-  public us = sessionStorage.getItem("stdcode");
-  public sem = sessionStorage.getItem("sem");
-  public year = sessionStorage.getItem("year");
-  //public tmpdatetoStr = sessionStorage.getItem("tmpdatetoStr");
-
-
-  urlFetch = "http://sevkn.ru.ac.th//etest/getPayment.jsp?STD_CODE=";
-=======
   //public tmpdatetoStr = sessionStorage.getItem("tmpdatetoStr");
 
 
   urlFetch = "http://sevkn.ru.ac.th/etest/getPayment.jsp?STD_CODE=";
->>>>>>> 762a820f (bk commit)
 
 
 

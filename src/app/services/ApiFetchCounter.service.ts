@@ -16,12 +16,8 @@ export interface TodoCounter {
 @Injectable()
 export class ApiFetchCounterService {
 
-<<<<<<< HEAD
-  urlFetchETCourse = "http://sevkn.ru.ac.th//etest/getCounter.jsp";
-=======
  // urlFetchETCourse = "http://sevkn.ru.ac.th/etest/getCounter.jsp";
   urlFetchETCourse = "http://sevkn.ru.ac.th/etest-api-12c/getCounter.jsp";
->>>>>>> 762a820f (bk commit)
 
   constructor(private http: HttpClient) {
    /* this.getJSON().subscribe(res => {
@@ -38,13 +34,10 @@ export class ApiFetchCounterService {
                 .pipe(map((response: any)=> response ),
                       catchError(err => {return (err)}));
   }
-<<<<<<< HEAD
-=======
 
   getJsonData(stdcode:string): Observable<any> {
     return this.http.get(this.urlFetchETCourse + '?STD_CODE=' + stdcode)
                 .pipe(map((response: any)=> response ),
                       catchError(err => {return (err)}));
   }
->>>>>>> 762a820f (bk commit)
 }
